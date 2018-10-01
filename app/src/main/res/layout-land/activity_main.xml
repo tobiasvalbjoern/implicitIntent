@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/main_edit_recipient"
+        android:id="@+id/main_edit_sender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="73dp"
@@ -18,17 +18,17 @@
         app:layout_constraintBottom_toTopOf="@+id/main_label_subject"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_label_recipient" />
+        app:layout_constraintTop_toBottomOf="@+id/main_label_sender" />
 
     <TextView
-        android:id="@+id/main_label_recipient"
+        android:id="@+id/main_label_sender"
         android:layout_width="105dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="63dp"
         android:text="Recipient"
-        app:layout_constraintBottom_toTopOf="@+id/main_edit_recipient"
-        app:layout_constraintStart_toStartOf="@+id/main_edit_recipient"
+        app:layout_constraintBottom_toTopOf="@+id/main_edit_sender"
+        app:layout_constraintStart_toStartOf="@+id/main_edit_sender"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:text="Subject"
         app:layout_constraintBottom_toTopOf="@+id/subject"
         app:layout_constraintStart_toStartOf="@+id/subject"
-        app:layout_constraintTop_toBottomOf="@+id/main_edit_recipient" />
+        app:layout_constraintTop_toBottomOf="@+id/main_edit_sender" />
 
     <EditText
         android:id="@+id/subject"

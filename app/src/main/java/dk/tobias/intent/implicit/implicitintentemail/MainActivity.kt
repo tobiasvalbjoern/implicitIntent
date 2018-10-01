@@ -12,17 +12,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        startMailIntent()
 
+        main_btn_send.setOnClickListener(){
+            startMailIntent()
+        }
 
     }
 
     private fun startMailIntent(){
     val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:")
-        intent.putExtra(Intent.EXTRA_EMAIL,"tvalbjoern@gmail.com")
-        intent.putExtra(Intent.EXTRA_SUBJECT,"Email subject for the mail")
-        intent.putExtra(Intent.EXTRA_TEXT,"Hi \n This is the mail")
+        val sender=main_edit_sender.text.toString()
+        intent.putExtra(Intent.EXTRA_EMAIL,sender)
+
+        val subject=main_edit_subject.text.toString()
+        intent.putExtra(Intent.EXTRA_SUBJECT,subject)
+
+        val body=main_edit_body.text.toString()
+        intent.putExtra(Intent.EXTRA_TEXT,body)
 
         if(intent.resolveActivity(packageManager) != null){
             startActivity(intent)
