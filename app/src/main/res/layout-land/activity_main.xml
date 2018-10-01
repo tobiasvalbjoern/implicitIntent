@@ -5,84 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="73dp">
 
     <EditText
         android:id="@+id/main_edit_sender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="73dp"
+        android:layout_marginTop="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/main_label_subject"
+        android:hint="sender"
+        android:inputType="textAutoCorrect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_label_sender" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/main_label_sender"
-        android:layout_width="105dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="63dp"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
         android:text="Recipient"
-        app:layout_constraintBottom_toTopOf="@+id/main_edit_sender"
-        app:layout_constraintStart_toStartOf="@+id/main_edit_sender"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/main_label_subject"
         android:layout_width="105dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="1dp"
         android:text="Subject"
-        app:layout_constraintBottom_toTopOf="@+id/subject"
-        app:layout_constraintStart_toStartOf="@+id/subject"
-        app:layout_constraintTop_toBottomOf="@+id/main_edit_sender" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/main_label_sender"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/subject"
+        android:id="@+id/main_edit_subject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="74dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/bodyLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_label_subject" />
+        android:hint="subject"
+        android:inputType="textAutoCorrect"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn_send"
+        app:layout_constraintStart_toStartOf="@+id/main_edit_body" />
 
     <TextView
-        android:id="@+id/bodyLabel"
+        android:id="@+id/main_label_body"
         android:layout_width="139dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="3dp"
+        android:layout_height="1dp"
         android:text="body of message"
-        app:layout_constraintBottom_toTopOf="@+id/main_edit_body"
-        app:layout_constraintStart_toStartOf="@+id/main_edit_body"
-        app:layout_constraintTop_toBottomOf="@+id/subject" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/main_label_sender"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/main_edit_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="93dp"
+        android:layout_marginTop="78dp"
+        android:hint="body"
+        android:layout_marginBottom="80dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bodyLabel" />
+        android:inputType="textAutoCorrect"
+        app:layout_constraintBottom_toBottomOf="@+id/main_edit_subject"
+        app:layout_constraintStart_toStartOf="@+id/main_edit_sender"
+        app:layout_constraintTop_toTopOf="@+id/main_edit_sender" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/main_btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="437dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="2dp"
+        android:text="Send mail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/main_edit_subject" />
 
 </android.support.constraint.ConstraintLayout>
