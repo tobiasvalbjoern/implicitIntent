@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/main_edit_recipient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="71dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/main_label_subject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_label_recipient" />
+
+    <TextView
+        android:id="@+id/main_label_recipient"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="63dp"
+        android:text="Recipient"
+        app:layout_constraintBottom_toTopOf="@+id/main_edit_recipient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_label_subject"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:text="Subject"
+        app:layout_constraintBottom_toTopOf="@+id/main_edit_subject"
+        app:layout_constraintStart_toStartOf="@+id/main_edit_subject"
+        app:layout_constraintTop_toBottomOf="@+id/main_edit_recipient" />
+
+    <EditText
+        android:id="@+id/main_edit_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/main_label_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_label_subject" />
+
+    <TextView
+        android:id="@+id/main_label_body"
+        android:layout_width="139dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:text="body of message"
+        app:layout_constraintBottom_toTopOf="@+id/main_edit_body"
+        app:layout_constraintStart_toStartOf="@+id/main_edit_body"
+        app:layout_constraintTop_toBottomOf="@+id/main_edit_subject" />
+
+    <EditText
+        android:id="@+id/main_edit_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="91dp"
+        android:ems="10"
+        android:hint="Body of mail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_label_body" />
+
+    <Button
+        android:id="@+id/main_btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Send mail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
